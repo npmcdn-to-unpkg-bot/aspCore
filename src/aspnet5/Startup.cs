@@ -25,7 +25,7 @@ namespace aspnet5
             }
 
             builder.AddEnvironmentVariables();
-            Configuration = builder.Build().ReloadOnChanged("appsettings.json");
+            Configuration = builder.Build();//.ReloadOnChanged("appsettings.json");
         }
 
         public IConfigurationRoot Configuration { get; set; }

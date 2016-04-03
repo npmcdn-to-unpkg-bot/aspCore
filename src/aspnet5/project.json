@@ -5,7 +5,6 @@
   },
 
   "dependencies": {
-    "MiscClasses": "",
     "Microsoft.ApplicationInsights.AspNet": "1.0.0-rc1",
     "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
@@ -20,6 +19,7 @@
 
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel",
+    "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5001"
   },
 
   "frameworks": {

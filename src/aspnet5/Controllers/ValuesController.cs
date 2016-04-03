@@ -6,6 +6,13 @@ using Microsoft.AspNet.Mvc;
 
 namespace aspnet5.Controllers
 {
+    public class MyMessage
+    {
+        public int Id { get; set; }
+
+        public string Message { get; set; }
+    }
+
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
@@ -18,9 +25,9 @@ namespace aspnet5.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public MyMessage Get(int id)
         {
-            return "value";
+            return new MyMessage { Id = 234, Message = "MyMessage" };
         }
 
         // POST api/values

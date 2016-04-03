@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aspnet5", "src\aspnet5\aspnet5.xproj", "{40AD16D4-155E-4B38-8EE2-92367A3AD450}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MiscClasses", "src\MiscClasses\MiscClasses.xproj", "{314EC53B-4060-4B0D-9D6F-37576AA7A5DF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,16 +22,11 @@ Global
 		{40AD16D4-155E-4B38-8EE2-92367A3AD450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40AD16D4-155E-4B38-8EE2-92367A3AD450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40AD16D4-155E-4B38-8EE2-92367A3AD450}.Release|Any CPU.Build.0 = Release|Any CPU
-		{314EC53B-4060-4B0D-9D6F-37576AA7A5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{314EC53B-4060-4B0D-9D6F-37576AA7A5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{314EC53B-4060-4B0D-9D6F-37576AA7A5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{314EC53B-4060-4B0D-9D6F-37576AA7A5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{40AD16D4-155E-4B38-8EE2-92367A3AD450} = {6C2058BE-75AF-4745-9E6D-013FFA8DCC36}
-		{314EC53B-4060-4B0D-9D6F-37576AA7A5DF} = {6C2058BE-75AF-4745-9E6D-013FFA8DCC36}
 	EndGlobalSection
 EndGlobal

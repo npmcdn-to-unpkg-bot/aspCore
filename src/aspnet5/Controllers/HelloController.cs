@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using System.Reflection;
-using MiscClasses;
 
 namespace aspnet5.Controllers
 {
@@ -12,10 +11,15 @@ namespace aspnet5.Controllers
     public class HelloController:Controller
     {
         [Route("[action]"), Route("")]
+        public ViewResult GetIndex()
+        {
+            return View("~/Views/Index");
+        }
+
+        [Route("[action]"), Route("q")]
         public string Index2()
         {
-            var greeter = new Greeter();
-            return greeter.GetGreeting()+
+             return "greeter.GetGreeting()"+
 #if DNX451
 
              Assembly.GetExecutingAssembly().FullName;
