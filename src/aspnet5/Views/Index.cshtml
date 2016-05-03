@@ -2,15 +2,24 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-<html>
+    <!DOCTYPE html>
+    <html>
     <head>
-        <title>
-            MVC title
-        </title>
+        <script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2-polyfills.js"></script>
+        <script src="//npmcdn.com/typescript@1.8.9/lib/typescript.js"></script>
+        <script src="//npmcdn.com/systemjs@0.19.24/dist/system.src.js"></script>
+        <script src="//npmcdn.com/rxjs@5.0.0-beta.2/bundles/Rx.js"></script>
+        <script src="//npmcdn.com/angular2@2.0.0-beta.13/bundles/angular2.dev.js"></script>
+        <script>
+            System.config({
+                transpiler: 'typescript',
+                typescriptOptions: { emitDecoratorMetadata: true }
+            });
+            System.import('main.ts');
+        </script>
     </head>
     <body>
-        @Html.ValidationSummary("", new { @class = "text-danger" })
-        @Html.Label("asd","123")
+        <hello-world></hello-world>
     </body>
 </html>
-}
+    }
