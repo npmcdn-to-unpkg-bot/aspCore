@@ -10,4 +10,15 @@ class HelloWorldComponent {
         this.name = 'Angular 2';
     }
 }
+@Component({
+    selector:'mysel',
+    template:'<p>MySel</p>'
+})
+class MySelComponent{
+    txt:string;
+    constructor(){
+        this.txt = "My TST"
+    }
+}
 bootstrap(HelloWorldComponent);
+bootstrap(MySelComponent);
