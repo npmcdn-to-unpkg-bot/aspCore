@@ -1,14 +1,10 @@
 System.config({
-    baseURL: "/",
-    transpiler: "typescript",
-    typescriptOptions: {
-        "emitDecoratorMetadata": true
-    },
-
+    transpiler: 'typescript',
+    typescriptOptions: {emitDecoratorMetadata: true},
     map: {
-        'rxjs': 'node_modules/rxjs/Rx.js',
+        'rxjs': 'https://npmcdn.com/rxjs@5.0.0-beta.6',
         '@angular/core' :
-            'node_modules/angular2/core.js',
+            'https://npmcdn.com/@angular/core@2.0.0-rc.1',
         '@angular/common' :
             'https://npmcdn.com/@angular/common@2.0.0-rc.1',
         '@angular/compiler' :
@@ -17,10 +13,15 @@ System.config({
             'https://npmcdn.com/@angular/platform-browser@2.0.0-rc.1',
         '@angular/platform-browser-dynamic':
             'https://npmcdn.com/@angular/platform-browser-dynamic@2.0.0-rc.1'
-    }
+    },
     packages: {
+        '@angular/core' : {main: 'index.js'},
+        '@angular/common' : {main: 'index.js'},
+        '@angular/compiler' : {main: 'index.js'},
+        '@angular/platform-browser' : {main: 'index.js'},
+        '@angular/platform-browser-dynamic': {main: 'index.js'},
         "app": {
-            "defaultExtension": "js",
+            "defaultExtension": "ts",
             "main": "angmain.ts"
         }
     }
