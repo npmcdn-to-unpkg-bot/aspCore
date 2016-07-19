@@ -9,8 +9,8 @@ import {TodoService} from "./todo-service.ts";
     //providers: [TodoService],
     template: `<div>
     <ul>
-    <li *ngFor="#todo of todoService.todos">
-    {{todo}}
+    <li *ngFor="let todo of todoService.todos">
+    {{todo.title}}
 </li>
 </ul>
     </div>`

@@ -1,10 +1,11 @@
 import {Injectable} from "@angular/core";
+import {TodoModel} from "./todo-model.ts"
 /**
  * Created by andre on 16.07.2016.
  */
 @Injectable()
 export class TodoService{
-    public todos : Array<any>;
+    public todos;// : [TodoModel];
     private static c = 0;
     static instance : TodoService;
     static isCreating : Boolean = false;
@@ -16,7 +17,11 @@ export class TodoService{
 
         TodoService.c = TodoService.c + 1;
         console.log(TodoService.c);
-        this.todos = []
+        this.todos = [
+            new TodoModel("eat"),
+            new TodoModel("sleep"),
+            new TodoModel("code")
+        ]
     }
 
     static getInstance() {
