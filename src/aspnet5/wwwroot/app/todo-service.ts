@@ -5,7 +5,7 @@ import {TodoModel} from "./todo-model.ts"
  */
 @Injectable()
 export class TodoService{
-    public todos;// : [TodoModel];
+    public todos : [TodoModel];
     private static c = 0;
     static instance : TodoService;
     static isCreating : Boolean = false;
@@ -33,5 +33,21 @@ export class TodoService{
         }
 
         return TodoService.instance;
+    }
+
+    addTodo(todoModel:TodoModel) {
+        this.todos = [...this.todos, todoModel];
+    }
+
+    toggleTodo(todo:TodoModel){
+        console.log(todo);
+        todo.toggle();
+        const i = this.todos.indexOf(todo);
+
+        this.todos = [
+            ...this.todos.slice(0, i),
+            todo,
+            ...this.todos.slice(i + 1)
+        ];
     }
 }

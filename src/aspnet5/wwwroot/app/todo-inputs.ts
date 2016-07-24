@@ -23,7 +23,7 @@ export class TodoInput{
     }
 
     onSubmit(){
-        this.todoService.todos.push(this.todoModel);
+        this.todoService.addTodo(this.todoModel);
         console.log(this.todoService.todos.length);
         this.todoModel = new TodoModel("next");
     }

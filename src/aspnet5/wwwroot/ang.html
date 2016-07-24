@@ -32,12 +32,23 @@
         });
         System.import('main.ts');
     </script>
+    <base href="/">
     <title>Angular 2 QuickStart</title>
+    <style>
+        .completed{
+            background-color: red;
+        }
+        .started{
+            background-color: yellow;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <!-- 3. Display the application -->
 <body>
+<div class="completed">Completed</div>
+<div class="started">Started</div>
 <my-app>Loading...</my-app>
 </body>
 </html>
