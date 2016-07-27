@@ -14,7 +14,8 @@ import {StartedPipe} from "./started-pipe.ts"
     directives: [TodoItemRenderer],
     template: `<div>
     <ul>
-    <li *ngFor="let todo of todoService.todos | started : status">
+    <li *ngFor="let todo of todoService.todos | started : status
+                                              | search : term">
     <todo-item-renderer [todo]="todo"
     (toggle)="todoService.toggleTodo($event)">
 </todo-item-renderer>
@@ -24,6 +25,7 @@ import {StartedPipe} from "./started-pipe.ts"
 })
 export class TodoList{
     @Input() status;
+    @Input() term;
     public  todoService : TodoService;
     constructor() {
         this.todoService = TodoService.getInstance();
