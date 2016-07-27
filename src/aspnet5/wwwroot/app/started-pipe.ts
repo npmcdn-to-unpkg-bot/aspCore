@@ -8,7 +8,7 @@ import {Pipe} from "@angular/core";
 })
 export class StartedPipe{
     //this will never know when new array member was added
-    transform(value){
-        return value.filter((item) => item.status === "started");
+    transform(value, status){
+        return value.filter((item) => item.status === status);
     }
 }
