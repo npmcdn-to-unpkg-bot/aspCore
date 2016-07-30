@@ -50,12 +50,15 @@ export class TodoService{
 
     toggleTodo(todo:TodoModel){
         console.log(todo);
-        todo.toggle();
+        //todo.toggle();
         const i = this.todos.indexOf(todo);
+        const stat = todo.status == "started" ? "completed" : "started";
+
+        const toggledTodo = Object.assign({}, todo, {status : stat});
 
         this.todos = [
             ...this.todos.slice(0, i),
-            todo,
+            toggledTodo,
             ...this.todos.slice(i + 1)
         ];
     }

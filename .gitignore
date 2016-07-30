@@ -32,3 +32,7 @@ project.lock.json
 .idea/
 node_modules/
 src/aspnet5/wwwroot/typings/
+src/aspnet5/wwwroot/app/*.js
+src/aspnet5/wwwroot/app/components/
+src/aspnet5/wwwroot/app/*.map
+src/aspnet5/wwwroot/main.j*
